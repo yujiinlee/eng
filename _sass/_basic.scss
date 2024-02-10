@@ -1,0 +1,496 @@
+// - - - - - - - - - - - - - - - - - -
+
+// Basics
+
+// - - - - - - - - - - - - - - - - - -
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Basics
+
+html, body {
+	height: 100%;
+}
+
+body {
+	background:$background-color;
+	font-family: $body-font;
+	font-weight: $regular-weight;
+	font-style: normal;
+	line-height: 1;
+	color: $text-medium-color;
+    word-break: keep-all;
+}
+
+body, html {
+	a {cursor: url(../cursor.png), url(../cursor.cur), auto}
+}
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Typography
+
+h1, h2, h3, h4, h5{
+	font-family: $body-font;
+	color: $text-dark-color;
+    word-break: keep-all;
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+h1, .h1 {
+	font-size: $h1-small;
+	font-weight: $h1-weight;
+	line-height: $h1-lineheight;
+	letter-spacing: $h1-spacing;
+
+	@include mq(tabletp) {
+		font-size: $h1-medium;
+	}
+
+	@include mq(laptop) {
+		font-size: $h1-large;
+	}
+}
+
+h2, .h2 {
+	margin-top: 44px;
+    margin-bottom: 8px;
+	font-size: $h2-small;
+	font-weight: $h2-weight;
+	line-height: $h2-lineheight;
+	letter-spacing: $h2-spacing;
+
+	@include mq(tabletp) {
+		font-size: $h2-medium;
+		margin-top: 56px
+	}
+
+	@include mq(laptop) {
+		font-size: $h2-large;
+		margin-top: 64px
+	}
+}
+
+h3, .h3 {
+	margin-top: 44px;
+    margin-bottom: 12px;
+	font-size: $h3-small;
+	font-weight: $h3-weight;
+	line-height: $h3-lineheight;
+	letter-spacing: $h3-spacing;
+
+	@include mq(tabletp) {
+		font-size: $h3-medium;
+	}
+
+	@include mq(laptop) {
+		font-size: $h3-large;
+	}
+}
+
+h4, .h4 {
+	margin-top: 25px;
+	font-size: $h4-small;
+	font-weight: $h4-weight;
+	line-height: $h4-lineheight;
+	letter-spacing: $h4-spacing;
+
+	@include mq(tabletp) {
+		font-size: $h4-medium;
+	}
+
+	@include mq(laptop) {
+		font-size: $h4-large;
+	}
+}
+
+h5, .h5 {
+	margin-top: 15px;
+	font-size: $h5-small;
+	font-weight: $h5-weight;
+	line-height: $h5-lineheight;
+	letter-spacing: $h5-spacing;
+
+	@include mq(tabletp) {
+		font-size: $h5-medium;
+	}
+
+	@include mq(laptop) {
+		font-size: $h5-large;
+	}
+}
+
+h6, .h6 {
+    font-family: $body-font;
+	color: #878d91;
+    word-break: keep-all;
+
+	&:first-child {
+		margin-top: 0;
+	}
+    
+    margin-top: 15px;
+	font-size: $h6-small;
+	font-weight: $h6-weight;
+	line-height: $h6-lineheight;
+	letter-spacing: $h6-spacing;
+
+	@include mq(tabletp) {
+		font-size: $h6-medium;
+	}
+
+	@include mq(laptop) {
+		font-size: $h6-large;
+	}
+}
+
+p, ul, ol {
+	margin-top: 4px;
+	font-size: $p-small;
+	font-weight: $p-weight;
+	line-height: $p-lineheight;
+	letter-spacing: $p-spacing;
+
+	@include mq(tabletp) {
+		font-size: $p-medium;
+	}
+
+	@include mq(laptop) {
+		font-size: $p-large;
+	}
+
+	strong {
+		font-weight: $bold-weight;
+	}
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+ul, ol {
+	// list-style-position: inside;
+	padding-left: 20px;
+}
+
+ul ul {
+	margin-bottom: 0px !important;
+}
+
+blockquote {
+	margin-top: 15px;
+	border-left: 1px solid $text-dark-color;
+	padding: 10px 0 10px 20px;
+	font-size: $blockquote-small;
+	font-weight: $blockquote-weight;
+	letter-spacing: $blockquote-spacing;
+	line-height: $blockquote-lineheight;
+
+	@include mq(tabletp) {
+		border-left-width: 3px;
+		padding: 10px 0 10px 30px;
+		font-size: $blockquote-medium;
+	}
+
+	@include mq(laptop) {
+		border-left-width: 4px;
+		padding: 10px 0 10px 40px;
+		font-size: $blockquote-large;
+	}
+
+	p {
+		font-size: $blockquote-small;
+		font-weight: $blockquote-weight;
+		letter-spacing: $blockquote-spacing;
+		line-height: $blockquote-lineheight;
+
+		@include mq(tabletp) {
+			font-size: $blockquote-medium;
+		}
+
+		@include mq(laptop) {
+			font-size: $blockquote-large;
+		}
+	}
+}
+
+a {
+	text-decoration: none;
+	color: $text-dark-color;
+	font-weight: $bold-weight;
+	@include transition(all 0.15s ease-in-out);
+
+	&:hover {
+		color: $accent-color;
+	}
+}
+
+.button {
+	display: inline-block;
+	padding: 9px 10px 10px;
+	font-size: 18px;
+	line-height: 1;
+	color: $background-color;
+	font-weight: $button-weight;
+	letter-spacing: $button-spacing;
+	cursor: pointer;
+
+	@include mq(tabletp) {
+		padding: 11px 20px 12px;
+		font-size: 18px;
+	}
+
+	&:hover {
+		color: adjust-hue($accent-color,15%);
+	}
+
+	svg {
+		margin-right: 5px;
+
+		&:last-child {
+			margin-right: 0;
+			margin-left: 5px;
+		}
+
+		@include mq(tabletp) {
+			margin-right: 8px;
+
+			&:last-child {
+				margin-right: 0;
+				margin-left: 8px;
+			}
+		}
+	}
+}
+
+.button--large {
+	padding: 15px 20px 16px;
+	font-size: 13px;
+
+	@include mq(tabletp) {
+		padding: 19px 40px 20px;
+		font-size: 17px;
+	}
+}
+
+.button--light {
+	background: transparent;
+	border-color: $text-dark-color;
+	color: $text-dark-color;
+
+	&:hover {
+		color: $accent-color;
+	}
+}
+
+.button--overlay {
+	background: transparent;
+	border-color: $overlay-text-color;
+	color: $overlay-text-color;
+
+	&:hover {
+		background: $overlay-text-color;
+		border-color: $overlay-text-color;
+		color: $accent-color;
+	}
+}
+
+hr {
+	margin: 40px 0;
+	border: 0;
+	height: 2px;
+	background: $background-alt-color;
+}
+
+::selection 	 { background: $accent-color; color: $background-color; }
+::-moz-selection { background: $accent-color; color: $background-color; }
+
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Page loading
+
+.page-loader {
+	display: none;
+}
+
+.page{
+	@include transition(all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1.0));
+}
+
+body.loading {
+
+	.loader {
+		opacity: 1;
+		visibility: visible;
+		@include transition(all 0.7s ease-in-out 1s);
+	}
+
+	.page{
+		opacity: 0;
+		visibility: hidden;
+		@include transition(all 0.7s ease-in-out, transform 0s ease-in-out 0.7s);
+		@include translate(0,20px);
+	}
+
+	.footer {
+		opacity: 0;
+		visibility: hidden;
+		@include transition(all 0.7s ease-in-out);
+	}
+}
+
+.loader {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	@include translate(-50%,-50%);
+	width: 60px;
+	height: 15px;
+
+	opacity: 0;
+	visibility: hidden;
+	@include transition(all 0.2s ease-in-out);
+
+	svg {
+		width: 100%;
+		height: 100%;
+		fill: rgba($text-dark-color,0.2);
+	}
+}
+
+.page,
+.page__content {
+	float: center;
+	clear: both;
+    margin: auto;
+	width: 100%;
+}
+
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Page sections
+
+//section{
+//	margin-top: 40px;
+//
+//	@include mq(tabletp) {
+//		margin-top: 50px;
+//	}
+//
+//	@include mq(tabletl) {
+//		margin-top: 60px;
+//	}
+//
+//	@include mq(laptop) {
+//		margin-top: 80px;
+//	}
+//    
+//}
+
+.wrap{
+	position: relative; 
+	margin: 0 auto;
+	max-width: 85%;
+
+	@include mq(tabletp) {
+		padding: 0;
+		max-width: 80%;
+	}
+
+	@include mq(tabletl) {
+		max-width: 80%;
+	}
+
+	@include mq(laptop) {
+		max-width: 1200px;
+	}
+}
+
+.main-text {
+    color: #261278 !important;
+    font-family:'GalleryModern';
+    //    text-shadow:
+////    3px 3px 0 #000,
+//    -1px -1px 0 #000,
+//    1px -1px 0 #000,
+//    -1px 1px 0 #000,
+//    1px 1px 0 #000;  
+    
+    @media all and (max-width: 768px){	
+            font-size: 3.5rem; 
+            font-weight: 300;
+            line-height: 1.1em;
+		}
+	/* 테블릿과 데스크탑 */
+	@media all and (min-width: 768px){
+		    font-size: 5.5em; 
+            font-weight: 300;
+            line-height: 1.1em;
+		}  
+	/* 테블릿 */
+	@media all and (min-width: 768px) and (max-width: 1024px){
+		    font-size: 4.8rem; 
+            font-weight: 300;
+            line-height: 1.1em;
+}
+    }
+
+.post-title {
+	font-size: $h1-small;
+	font-weight: $h1-weight;
+	line-height: $h1-lineheight;
+	letter-spacing: $h1-spacing;
+
+	@include mq(tabletp) {
+		font-size: $h1-medium;
+	}
+
+	@include mq(laptop) {
+		font-size: $h1-large;
+	}
+}
+
+// 애니메이션
+
+@keyframes text-clip {
+	from {
+	  clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+	}
+	to {
+	  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	}
+  }
+
+
+
+.hero-text,
+.stroke {
+	max-width: 115%;
+	width: 115%;
+
+	@include mq(tabletp) {
+		max-width: 90%;
+	}
+
+	@include mq(tabletl) {
+		max-width: 90%;
+	}
+
+	@include mq(laptop) {
+		max-width: 75%;
+	}
+  }
+
+.hero-text, .stroke {
+	@media all and (min-width: 768px){
+		animation: text-clip 2s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+	}
+	
+}
+
+// .stroke {
+// @media all and (min-width: 768px){
+// 	animation: fadein 2s cubic-bezier(0.5, 0, 0.1, 1) both;
+// 	}
+// }

@@ -1,0 +1,118 @@
+// - - - - - - - - - - - - - - - - - -
+
+// Portfolio
+
+// - - - - - - - - - - - - - - - - - -
+
+.portfolio {
+	padding: 0 $grid-spacing;
+}
+
+.portfolio-wrap {
+    display: flex;
+	flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.portfolio-item {
+	position: relative;
+	padding: 24px 24px 36px 0;
+	float: left;
+	margin: auto;
+	width: 48%;
+    
+    @media all and (max-width: 767px) {
+        width: 100%;
+        padding: 8px;
+    }
+}
+
+.portfolio-item__link {
+	position: relative;
+	display: block;
+    transition: top ease 0.5s;	
+
+	@include mq(tabletl) {
+
+		&:hover {
+			.portfolio-item__image {
+				transform: translate(0, -8px);
+				// box-shadow: 0 8px 12px 1px rgba(204, 204, 204, .6);
+			}
+
+			.portfolio-item__title, .portfolio-item__categories{
+				color: $accent_color;
+			}
+		}
+	}
+}
+
+a[href$='#'] { pointer-events: none; }
+
+
+.portfolio-item__image {
+	width: 100%;
+	@include transition(all 0.2s ease-in-out);
+
+}
+
+.portfolio-item__image img{
+	border-radius: 20px;
+	box-shadow: 0 4px 4px 1px rgba(204, 204, 204, .2);
+
+}
+
+.portfolio-item__content {
+	// position: absolute;
+	// top: 0;
+	// right: 0;
+	// bottom: 0;
+	// left: 0;
+	// display: flex;
+	align-items: left;
+	justify-content: left;
+
+	// opacity: 0;
+	// visibility: hidden;
+	@include transition(all 0.2s ease-in-out);
+}
+
+.portfolio-item__info {
+    margin-top: 20px;
+    text-align: left;
+
+}
+
+.portfolio-item__title {
+    color: $overlay-text-color;
+	font-size: $grid-item-title-small;
+	font-weight:  $grid-item-title-weight;
+    margin-bottom: 0px;
+	@include transition(all 0.2s ease-in-out);
+
+	@include mq(tabletp) {
+		font-size: $grid-item-title-medium;
+	}
+
+	@include mq(laptop) {
+		font-size: $grid-item-title-medium;
+	}
+}
+
+.portfolio-item__categories {
+	margin-top: 2px;
+	color: rgba($overlay-text-color, 0.5);
+	font-size: $grid-item-subtitle-small;
+	font-weight: $grid-item-subtitle-weight;
+	letter-spacing: $grid-item-subtitle-spacing;
+	line-height: 1.2;
+	@include transition(all 0.2s ease-in-out);
+
+	@include mq(tabletp) {
+		font-size: $grid-item-subtitle-medium;
+	}
+
+	@include mq(laptop) {
+		font-size: $grid-item-subtitle-large;
+	}
+}

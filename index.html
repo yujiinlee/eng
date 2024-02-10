@@ -1,0 +1,76 @@
+---
+layout: default
+title: YUJIN LEE
+description: 프로덕트 디자이너 이유진입니다.
+featured_image: '/img/opengraph.png'
+---
+
+<section class="intro_main">
+    
+    {% if site.data.settings.hero_settings.background_image %}
+	<img src="{{ site.data.settings.hero_settings.background_image | relative_url }}" class="hero__background" draggable="false">
+	{% endif %}
+
+	<div class="wrap">
+
+		<div class="main-text">
+			<img class="hero-text" src="img/hero/line1.svg"></img>
+
+			<img class="stroke" src="img/hero/stroke.svg"></img>
+
+			<img class="hero-text" src="img/hero/line2.svg"></img>
+
+			<img class="stroke" src="img/hero/stroke.svg"></img>
+			
+			<img class="hero-text" src="img/hero/line3.svg"></img>
+<!-- 
+			<img class="stroke" src="img/hero/stroke.svg"></img>
+
+			<img class="hero-text" src="img/hero/line4.svg"></img>
+
+			<img class="stroke" src="img/hero/stroke.svg"></img>
+
+			<img class="hero-text" src="img/hero/line5.svg"></img> -->
+
+			</div>
+
+		<p style="margin-top: 16px; color:#95979B;">프로덕트 디자이너 이유진입니다.</p>
+
+	</div>
+
+</section>
+
+<section class="portfolio">
+
+	<div class="content-wrap portfolio-wrap">
+
+		{% for project in site.projects reversed %}
+
+		<div class="portfolio-item">
+
+			{% if project.external_url %}
+			<a class="portfolio-item__link" href="{{ project.external_url | replace:'index.html','' }}" target="_blank:">
+			{% else %}
+			<a class="portfolio-item__link" href="{{ project.url }}">
+			{% endif %}
+
+				<div class="portfolio-item__image">
+					<img src="{{ project.featured_image  }}" alt="{{ project.title }}">
+				</div>
+
+				<div class="portfolio-item__content">
+					<div class="portfolio-item__info">
+						<h2 class="portfolio-item__title">{{ project.title }}</h2>
+						<p class="portfolio-item__categories">{{ project.categories }}</p>
+					</div>
+				</div>
+
+			</a>
+
+		</div>
+
+		{% endfor %}
+
+	</div>
+
+</section>
