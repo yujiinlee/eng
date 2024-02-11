@@ -78,7 +78,7 @@ color_settings:
 font_settings:
   font_embed: '<link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">'
   title_font: '"Source Code Pro", monospace;'
-  body_font: '"Poppins", sans-serif;'
+  body_font: '"DM Sans", sans-serif;'
 
   regular_weight: 400
   bold_weight: 700

@@ -88,6 +88,7 @@ a[href$='#'] { pointer-events: none; }
 	font-size: $grid-item-title-small;
 	font-weight:  $grid-item-title-weight;
     margin-bottom: 0px;
+	margin-top: 8px;
 	@include transition(all 0.2s ease-in-out);
 
 	@include mq(tabletp) {
@@ -100,7 +101,7 @@ a[href$='#'] { pointer-events: none; }
 }
 
 .portfolio-item__categories {
-	margin-top: 2px;
+	margin-top: 8px;
 	color: rgba($overlay-text-color, 0.5);
 	font-size: $grid-item-subtitle-small;
 	font-weight: $grid-item-subtitle-weight;
