@@ -1,6 +1,6 @@
 site: Yujin Lee
 url: "https://yujiinlee.github.io/eng"
-baseurl: "https://yujiinlee.github.io/eng"
+baseurl: "eng"
 collections:
   pages:
     output: true
