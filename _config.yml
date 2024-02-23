@@ -4,13 +4,13 @@ baseurl: /eng
 collections:
   pages:
     output: true
-    permalink: /:name
+    permalink: /eng/:name
   posts:
     output: true
-    permalink: /blog/:slug
+    permalink: /eng/blog/:slug
   projects:
     output: true
-    permalink: /project/:slug
+    permalink: /eng/project/:slug
 
 defaults:
   -
