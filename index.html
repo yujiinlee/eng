@@ -51,7 +51,7 @@ featured_image: '/img/opengraph.png'
 			{% if project.external_url %}
 			<a class="portfolio-item__link" href="{{ project.external_url | replace:'index.html','' }}" target="_blank:">
 			{% else %}
-			<a class="portfolio-item__link" href="{{ project.url }}">
+			<a class="portfolio-item__link" href="{{ project.url | relative_url }}">
 			{% endif %}
 
 				<div class="portfolio-item__image">
