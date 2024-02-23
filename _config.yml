@@ -4,13 +4,13 @@ baseurl: /eng
 collections:
   pages:
     output: true
-    permalink: /eng/:name
+    permalink: /:name
   posts:
     output: true
-    permalink: /eng/blog/:slug
+    permalink: /blog/:slug
   projects:
     output: true
-    permalink: /eng/project/:slug
+    permalink: /project/:slug
 
 defaults:
   -
@@ -51,7 +51,7 @@ plugins:
   - jekyll-sitemap
 
 paginate: 6
-paginate_path: "eng/blog/page:num/"
+paginate_path: "/blog/page:num/"
 
 gallery_types:
   carousel: Carousel
