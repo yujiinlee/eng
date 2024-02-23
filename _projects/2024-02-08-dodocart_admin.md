@@ -3,7 +3,7 @@ title: 'DodoCart Admin'
 categories: 'Admin'
 date: 2024-02-10 00:00:00
 description: 
-featured_image: '/img/00_projects/795shots_so.png'
+featured_image: '/eng/img/00_projects/795shots_so.png'
 ---
 ![](/img/00_projects/795shots_so.png)
 
