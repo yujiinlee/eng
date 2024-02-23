@@ -1,7 +1,7 @@
 ---
 title: 'Creating the Search Experience for Q-Commerce'
 categories: 'App'
-date: 2024-02-10 00:00:00
+date: 2024-02-18 00:00:00
 description: 
 featured_image: '/eng/img/00_projects/commerce_search/search_cover.png'
 ---
